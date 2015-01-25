@@ -16,6 +16,9 @@ shinyUI(pageWithSidebar(
   sidebarPanel(radioButtons(inputId="factor", label="Factor", choices=factors), selected="cyl"),
   mainPanel(
     h3("Miles per Gallon for Selected Factor"),
-    plotOutput("plotDisplay")
+    plotOutput("plotDisplay"),
+    p("Click one of the radio buttons at left to see a different chart. Weight is in pounds/1000.
+      The regression line is in red.
+      Each chart is regenerated whenever you click a radio button.")
   )
 ))
